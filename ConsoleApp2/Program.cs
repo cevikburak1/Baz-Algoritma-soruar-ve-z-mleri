@@ -693,13 +693,35 @@ internal class Program
 
     //10 elemanlı bir sayı dizisinde en küçük elemanın bu dizinin kaçıncı 
     //elemanı olduğunu bulan program
+    //public string Result()
+    //{
+    //    int[] sayiDizisi = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    //    int[] dizi = sayiDizisi.ToArray();
+    //    int min =  dizi.Min();
+    //    int minIdenx = Array.IndexOf(dizi, min);//En Küçük Elemanın Dizideki Sırasını Buluyor
+    //    Console.WriteLine("K' Nın aladıgı  deger :  "  + minIdenx);
+    //    return "";
+
+    //}
+
+
+
+    //Girilen Kelimenin Polindrom Olup Olmadını Bulan Program
     public string Result()
     {
-        int[] sayiDizisi = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-        int[] dizi = sayiDizisi.ToArray();
-        int min =  dizi.Min();
-        int minIdenx = Array.IndexOf(dizi, min);//En Küçük Elemanın Dizideki Sırasını Buluyor
-        Console.WriteLine("K' Nın aladıgı  deger :  "  + minIdenx);
+         Console.WriteLine("Kelime girin:");
+         string k = Console.ReadLine();
+        char[] dizi = k.ToCharArray();
+        Array.Reverse(dizi);
+        string terstenokunuşu = new string(dizi);
+        if(k== terstenokunuşu)
+        {
+            Console.WriteLine("Polindromdur");
+        }
+        else
+        {
+            Console.WriteLine("Polindrom Degildir");
+        }
         return "";
 
     }
