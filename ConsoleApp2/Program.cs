@@ -808,10 +808,11 @@ internal class Program
 
     //11 elemanlı bir dizinin elemanlarından hem 4'e hemde 5'e bölünen
     //sayıları bulan program
+
     //public string Result()
     //{
     //    List<int> list = new List<int>();
-    //    int[] sayiDizisi = { 1, 2, 3, 4, 5, 6, 7, 40, 20, 10,100 };
+    //    int[] sayiDizisi = { 1, 2, 3, 4, 5, 6, 7, 40, 20, 10, 100 };
 
     //    for (int i = 0; i < sayiDizisi.Length; i++)
     //    {
@@ -835,23 +836,47 @@ internal class Program
     //.Girilecek 10 adet sayıyı bir diziye aktararak bu dizideki sayıların
     //ortalamasını bulduran program
 
+    //public string Result()
+    //{
+    //    int[] sayidizisi = new int[10];
+    //    int ortlama = 0;
+    //    int toplam = 0;
+    //    for (int i = 1; i < 10; i++)
+    //    {
+    //        Console.WriteLine($"{i}.Sayıyı girin:");
+    //        int k = Convert.ToInt32(Console.ReadLine());
+    //        sayidizisi[i] =k;
+    //    }
+    //    for (int i = 0; i < sayidizisi.Length; i++)
+    //    {
+    //        toplam += sayidizisi[i];
+    //    }
+    //    ortlama =toplam/sayidizisi.Length;
+    //    Console.WriteLine($"Ortalama: {ortlama}");
+    //    return "";
+
+    //}
+
+    //Girilen cümlede, girilen karakterden kaç tane olduğunu bulan
+    //program
+
     public string Result()
     {
-        int[] sayidizisi = new int[10];
-        int ortlama = 0;
-        int toplam = 0;
-        for (int i = 1; i < 10; i++)
+        string cümle = "Yeşil yapraklı ağaçların arasında güneşli bir günün tadını çıkardılar";
+        Console.WriteLine($"{cümle}");
+        char[] chars = cümle.ToCharArray();
+        int sayac = 0;
+        Console.WriteLine("Harf Girin:");
+        string k = Console.ReadLine();
+        for (int i = 0; i < chars.Length; i++)
         {
-            Console.WriteLine($"{i}.Sayıyı girin:");
-            int k = Convert.ToInt32(Console.ReadLine());
-            sayidizisi[i] =k;
+            var aranankelime = chars[i];
+            if (k == aranankelime.ToString())
+            {
+                sayac++;
+            }
         }
-        for (int i = 0; i < sayidizisi.Length; i++)
-        {
-            toplam += sayidizisi[i];
-        }
-        ortlama =toplam/sayidizisi.Length;
-        Console.WriteLine($"Ortalama: {ortlama}");
+        Console.WriteLine($"Toplam Bu cümlede : {sayac} tane {k} harfi var");
         return "";
 
     }
