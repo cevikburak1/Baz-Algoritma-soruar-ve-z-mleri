@@ -781,30 +781,54 @@ internal class Program
 
 
     //Gelen dizide kaç pozitifi kaç negatif  oldugunu bulma 
+    //public string Result()
+    //{
+
+    //    int[] sayiDizisi = { 1, -2, 3, -4, 5, 6, 7, -8, 9, -10 };
+    //    int negatif = 0;
+    //    int pozitif = 0;
+    //    for (int i = 0; i < sayiDizisi.Length; i++)
+    //    {
+    //        int sayi = sayiDizisi[i];
+    //        if (sayi > 0)
+    //        {
+    //            pozitif++;
+    //        }
+    //        else
+    //        {
+    //            negatif++;
+    //        }
+    //    }
+    //    Console.WriteLine($"pozitif OLanların Sayısı : {pozitif}");
+    //    Console.WriteLine($"negatif OLanların Sayısı : {negatif}");
+    //    return "";
+
+    //}
+
+
+    //11 elemanlı bir dizinin elemanlarından hem 4'e hemde 5'e bölünen
+    //sayıları bulan program
     public string Result()
     {
+        List<int> list = new List<int>();
+        int[] sayiDizisi = { 1, 2, 3, 4, 5, 6, 7, 40, 20, 10,100 };
 
-        int[] sayiDizisi = { 1, -2, 3, -4, 5, 6, 7, -8, 9, -10 };
-        int negatif = 0;
-        int pozitif = 0;
         for (int i = 0; i < sayiDizisi.Length; i++)
         {
-            int sayi = sayiDizisi[i];
-            if (sayi > 0)
+            int sayi =sayiDizisi[i];
+            if(sayi%5==0 && sayi % 4 == 0)
             {
-                pozitif++;
-            }
-            else
-            {
-                negatif++;
+                list.Add(sayi);
             }
         }
-        Console.WriteLine($"pozitif OLanların Sayısı : {pozitif}");
-        Console.WriteLine($"negatif OLanların Sayısı : {negatif}");
+        foreach (var item in list)
+        {
+            Console.WriteLine($"4 e ve 5 e  Bölünenler: {item}");
+        }
+           
+        
         return "";
 
     }
-
-
 
 }
