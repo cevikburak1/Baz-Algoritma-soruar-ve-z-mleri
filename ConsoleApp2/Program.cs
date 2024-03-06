@@ -808,27 +808,51 @@ internal class Program
 
     //11 elemanlı bir dizinin elemanlarından hem 4'e hemde 5'e bölünen
     //sayıları bulan program
+    //public string Result()
+    //{
+    //    List<int> list = new List<int>();
+    //    int[] sayiDizisi = { 1, 2, 3, 4, 5, 6, 7, 40, 20, 10,100 };
+
+    //    for (int i = 0; i < sayiDizisi.Length; i++)
+    //    {
+    //        int sayi =sayiDizisi[i];
+    //        if(sayi%5==0 && sayi % 4 == 0)
+    //        {
+    //            list.Add(sayi);
+    //        }
+    //    }
+    //    foreach (var item in list)
+    //    {
+    //        Console.WriteLine($"4 e ve 5 e  Bölünenler: {item}");
+    //    }
+
+
+    //    return "";
+
+    //}
+
+
+    //.Girilecek 10 adet sayıyı bir diziye aktararak bu dizideki sayıların
+    //ortalamasını bulduran program
+
     public string Result()
     {
-        List<int> list = new List<int>();
-        int[] sayiDizisi = { 1, 2, 3, 4, 5, 6, 7, 40, 20, 10,100 };
-
-        for (int i = 0; i < sayiDizisi.Length; i++)
+        int[] sayidizisi = new int[10];
+        int ortlama = 0;
+        int toplam = 0;
+        for (int i = 1; i < 10; i++)
         {
-            int sayi =sayiDizisi[i];
-            if(sayi%5==0 && sayi % 4 == 0)
-            {
-                list.Add(sayi);
-            }
+            Console.WriteLine($"{i}.Sayıyı girin:");
+            int k = Convert.ToInt32(Console.ReadLine());
+            sayidizisi[i] =k;
         }
-        foreach (var item in list)
+        for (int i = 0; i < sayidizisi.Length; i++)
         {
-            Console.WriteLine($"4 e ve 5 e  Bölünenler: {item}");
+            toplam += sayidizisi[i];
         }
-           
-        
+        ortlama =toplam/sayidizisi.Length;
+        Console.WriteLine($"Ortalama: {ortlama}");
         return "";
 
     }
-
 }
