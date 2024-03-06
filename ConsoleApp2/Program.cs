@@ -694,15 +694,15 @@ internal class Program
     //10 elemanlı bir sayı dizisinde en küçük elemanın bu dizinin kaçıncı 
     //elemanı olduğunu bulan program
 
-    public string Result()
-    {
-        int[] sayiDizisi = { 2, 1, 3, 4, 5, 6, 7, 8, 9, 10 };
-        int min = sayiDizisi.Min();
-        int minIdenx = Array.IndexOf(sayiDizisi, min);//En Küçük Elemanın Dizideki Sırasını Buluyor
-        Console.WriteLine("K' Nın aladıgı  deger :  "  + minIdenx);
-        return "";
+    //public string Result()
+    //{
+    //    int[] sayiDizisi = { 2, 1, 3, 4, 5, 6, 7, 8, 9, 10 };
+    //    int min = sayiDizisi.Min();
+    //    int minIdenx = Array.IndexOf(sayiDizisi, min);//En Küçük Elemanın Dizideki Sırasını Buluyor
+    //    Console.WriteLine("K' Nın aladıgı  deger :  "  + minIdenx);
+    //    return "";
 
-    }
+    //}
 
 
 
@@ -772,35 +772,38 @@ internal class Program
     //            başarılıolanlar++;
     //        }
     //    }
-       
+
     //    Console.WriteLine($"Başarılı OLanların Sayısı : {başarılıolanlar}");
     //    return "";
 
     //}
 
-    //public string Result()
-    //{
 
-    //    int[] sayiDizisi = { 1, -2, 3, -4, 5, 6, 7, -8, 9, -10 };
-    //    int negatif = 0;
-    //    int pozitif = 0;
-    //    for (int i = 0; i < sayiDizisi.Length;i++)
-    //    {
-    //        int sayi= sayiDizisi[i];
-    //        if (sayi > 0)
-    //        {
-    //            pozitif++;
-    //        }
-    //        else
-    //        {
-    //            negatif++;
-    //        }
-    //    }
-    //    Console.WriteLine($"pozitif OLanların Sayısı : {pozitif}");
-    //    Console.WriteLine($"negatif OLanların Sayısı : {negatif}");
-    //    return "";
 
-    //}
+    //Gelen dizide kaç pozitifi kaç negatif  oldugunu bulma 
+    public string Result()
+    {
+
+        int[] sayiDizisi = { 1, -2, 3, -4, 5, 6, 7, -8, 9, -10 };
+        int negatif = 0;
+        int pozitif = 0;
+        for (int i = 0; i < sayiDizisi.Length; i++)
+        {
+            int sayi = sayiDizisi[i];
+            if (sayi > 0)
+            {
+                pozitif++;
+            }
+            else
+            {
+                negatif++;
+            }
+        }
+        Console.WriteLine($"pozitif OLanların Sayısı : {pozitif}");
+        Console.WriteLine($"negatif OLanların Sayısı : {negatif}");
+        return "";
+
+    }
 
 
 
