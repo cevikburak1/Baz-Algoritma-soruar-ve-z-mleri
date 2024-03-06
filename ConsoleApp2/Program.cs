@@ -693,6 +693,7 @@ internal class Program
 
     //10 elemanlı bir sayı dizisinde en küçük elemanın bu dizinin kaçıncı 
     //elemanı olduğunu bulan program
+
     //public string Result()
     //{
     //    int[] sayiDizisi = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -707,22 +708,50 @@ internal class Program
 
 
     //Girilen Kelimenin Polindrom Olup Olmadını Bulan Program
+
+    //public string Result()
+    //{
+    //    Console.WriteLine("Kelime girin:");
+    //    string k = Console.ReadLine();
+    //    char[] dizi = k.ToCharArray();
+    //    Array.Reverse(dizi);
+    //    string terstenokunuşu = new string(dizi);
+    //    if (k == terstenokunuşu)
+    //    {
+    //        Console.WriteLine("Polindromdur");
+    //    }
+    //    else
+    //    {
+    //        Console.WriteLine("Polindrom Degildir");
+    //    }
+    //    return "";
+
+    //}
+
+    //BİLGİSAYAR  kelimesinin harflerini birer sola kaydırarak yeniden bilgisayar olunca bulan Program
     public string Result()
     {
-         Console.WriteLine("Kelime girin:");
-         string k = Console.ReadLine();
-        char[] dizi = k.ToCharArray();
-        Array.Reverse(dizi);
-        string terstenokunuşu = new string(dizi);
-        if(k== terstenokunuşu)
+        string kelime = "Bilgisayar";
+        char[] dizi = kelime.ToCharArray();
+        bool kelimeDogru = false;
+        while (!kelimeDogru)
         {
-            Console.WriteLine("Polindromdur");
-        }
-        else
-        {
-            Console.WriteLine("Polindrom Degildir");
+            Console.WriteLine(dizi);
+            char ilkKarakter = dizi[0];
+            for (int i = 0; i < dizi.Length - 1; i++)
+            {
+                dizi[i] = dizi[i + 1];
+            }
+            dizi[dizi.Length - 1] = ilkKarakter;
+            Thread.Sleep(200);
+            if (new string(dizi) == kelime)
+            {
+                Console.WriteLine(kelime);
+                kelimeDogru = true;
+            }
         }
         return "";
 
     }
+
 }
