@@ -694,16 +694,15 @@ internal class Program
     //10 elemanlı bir sayı dizisinde en küçük elemanın bu dizinin kaçıncı 
     //elemanı olduğunu bulan program
 
-    //public string Result()
-    //{
-    //    int[] sayiDizisi = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-    //    int[] dizi = sayiDizisi.ToArray();
-    //    int min =  dizi.Min();
-    //    int minIdenx = Array.IndexOf(dizi, min);//En Küçük Elemanın Dizideki Sırasını Buluyor
-    //    Console.WriteLine("K' Nın aladıgı  deger :  "  + minIdenx);
-    //    return "";
+    public string Result()
+    {
+        int[] sayiDizisi = { 2, 1, 3, 4, 5, 6, 7, 8, 9, 10 };
+        int min = sayiDizisi.Min();
+        int minIdenx = Array.IndexOf(sayiDizisi, min);//En Küçük Elemanın Dizideki Sırasını Buluyor
+        Console.WriteLine("K' Nın aladıgı  deger :  "  + minIdenx);
+        return "";
 
-    //}
+    }
 
 
 
@@ -760,22 +759,49 @@ internal class Program
     //veriliyor.Başarı notu 50 olduğuna göre kaç öğrencinin başarılı
     //olduğunu bulan program
 
-    public string Result()
-    {
+    //public string Result()
+    //{
 
-        int başarılıolanlar = 0;
-        for (int i = 1; i <= 10; i++)
-        {
-            Console.WriteLine($"{i}.Notu girin:");
-            int girilennot = Convert.ToInt16(Console.ReadLine());
-            if (girilennot > 50)
-            {
-                başarılıolanlar++;
-            }
-        }
+    //    int başarılıolanlar = 0;
+    //    for (int i = 1; i <= 10; i++)
+    //    {
+    //        Console.WriteLine($"{i}.Notu girin:");
+    //        int girilennot = Convert.ToInt16(Console.ReadLine());
+    //        if (girilennot > 50)
+    //        {
+    //            başarılıolanlar++;
+    //        }
+    //    }
        
-        Console.WriteLine($"Başarılı OLanların Sayısı : {başarılıolanlar}");
-        return "";
+    //    Console.WriteLine($"Başarılı OLanların Sayısı : {başarılıolanlar}");
+    //    return "";
 
-    }
+    //}
+
+    //public string Result()
+    //{
+
+    //    int[] sayiDizisi = { 1, -2, 3, -4, 5, 6, 7, -8, 9, -10 };
+    //    int negatif = 0;
+    //    int pozitif = 0;
+    //    for (int i = 0; i < sayiDizisi.Length;i++)
+    //    {
+    //        int sayi= sayiDizisi[i];
+    //        if (sayi > 0)
+    //        {
+    //            pozitif++;
+    //        }
+    //        else
+    //        {
+    //            negatif++;
+    //        }
+    //    }
+    //    Console.WriteLine($"pozitif OLanların Sayısı : {pozitif}");
+    //    Console.WriteLine($"negatif OLanların Sayısı : {negatif}");
+    //    return "";
+
+    //}
+
+
+
 }
