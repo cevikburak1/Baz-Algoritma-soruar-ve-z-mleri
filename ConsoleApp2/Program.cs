@@ -729,29 +729,53 @@ internal class Program
     //}
 
     //BİLGİSAYAR  kelimesinin harflerini birer sola kaydırarak yeniden bilgisayar olunca bulan Program
+    //public string Result()
+    //{
+    //    string kelime = "Bilgisayar";
+    //    char[] dizi = kelime.ToCharArray();
+    //    bool kelimeDogru = false;
+    //    while (!kelimeDogru)
+    //    {
+    //        Console.WriteLine(dizi);
+    //        char ilkKarakter = dizi[0];
+    //        for (int i = 0; i < dizi.Length - 1; i++)
+    //        {
+    //            dizi[i] = dizi[i + 1];
+    //        }
+    //        dizi[dizi.Length - 1] = ilkKarakter;
+    //        Thread.Sleep(200);
+    //        if (new string(dizi) == kelime)
+    //        {
+    //            Console.WriteLine(kelime);
+    //            kelimeDogru = true;
+    //        }
+    //    }
+    //    return "";
+
+    //}
+
+
+
+    //Bir sınıftaki 50 öğrencinin bir dersten aldıkları yıl sonu notları
+    //veriliyor.Başarı notu 50 olduğuna göre kaç öğrencinin başarılı
+    //olduğunu bulan program
+
     public string Result()
     {
-        string kelime = "Bilgisayar";
-        char[] dizi = kelime.ToCharArray();
-        bool kelimeDogru = false;
-        while (!kelimeDogru)
+
+        int başarılıolanlar = 0;
+        for (int i = 1; i <= 10; i++)
         {
-            Console.WriteLine(dizi);
-            char ilkKarakter = dizi[0];
-            for (int i = 0; i < dizi.Length - 1; i++)
+            Console.WriteLine($"{i}.Notu girin:");
+            int girilennot = Convert.ToInt16(Console.ReadLine());
+            if (girilennot > 50)
             {
-                dizi[i] = dizi[i + 1];
-            }
-            dizi[dizi.Length - 1] = ilkKarakter;
-            Thread.Sleep(200);
-            if (new string(dizi) == kelime)
-            {
-                Console.WriteLine(kelime);
-                kelimeDogru = true;
+                başarılıolanlar++;
             }
         }
+       
+        Console.WriteLine($"Başarılı OLanların Sayısı : {başarılıolanlar}");
         return "";
 
     }
-
 }
