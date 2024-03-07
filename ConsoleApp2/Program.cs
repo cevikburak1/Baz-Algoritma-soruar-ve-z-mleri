@@ -781,6 +781,7 @@ internal class Program
 
 
     //Gelen dizide kaç pozitifi kaç negatif  oldugunu bulma 
+
     //public string Result()
     //{
 
@@ -857,26 +858,85 @@ internal class Program
 
     //}
 
+
     //Girilen cümlede, girilen karakterden kaç tane olduğunu bulan
     //program
 
+    //public string Result()
+    //{
+    //    string cümle = "Yeşil yapraklı ağaçların arasında güneşli bir günün tadını çıkardılar";
+    //    Console.WriteLine($"{cümle}");
+    //    char[] chars = cümle.ToCharArray();
+    //    int sayac = 0;
+    //    Console.WriteLine("Harf Girin:");
+    //    string k = Console.ReadLine();
+    //    for (int i = 0; i < chars.Length; i++)
+    //    {
+    //        var aranankelime = chars[i];
+    //        if (k == aranankelime.ToString())
+    //        {
+    //            sayac++;
+    //        }
+    //    }
+    //    Console.WriteLine($"Toplam Bu cümlede : {sayac} tane {k} harfi var");
+    //    return "";
+
+    //}
+
+
+
+    //Bir dizide dışarıdan girilen bir sayının, dizinin elemanlarından kaç 
+    //tanesinden küçük olduğunu bulan program
+
+    //public string Result()
+    //{
+    //    int[] sayiDizisi =new int[] { 1, 2, 3, 4, 5, 6, 7, 40, 20, 10, 100 };
+    //    int sayac = 0;
+    //    Console.WriteLine("Harf Girin:");
+    //    int k = Convert.ToInt16(Console.ReadLine());
+    //    for (int i = 0; i < sayiDizisi.Length; i++)
+    //    {
+    //        if (sayiDizisi[i] > k)
+    //        {
+    //            sayac++;
+    //        }
+    //    }
+    //    Console.WriteLine($"girilen sayı dizideki elemanların {sayac} tanesinden küçük");
+    //    return "";
+
+    //}
+
+
+    //10 elemanlı bir sayı dizisinin en büyük ve en küçük elemanlarını 
+    //ve yerini bulan program
+
+    //public string Result()
+    //{
+    //  int[] sayiDizisi = new int[] { 5, 12, 33, 19, 27, 8, 42, 56, 91, 10 };
+    //  var enbüyükolanınyeri = Array.IndexOf(sayiDizisi, sayiDizisi.Max());
+    //  var enküçükolanınsırası = Array.IndexOf(sayiDizisi, sayiDizisi.Min());
+    //  Console.WriteLine($"girilen sayı dizideki en büyük elamnın sırası {enbüyükolanınyeri} girilen sayı dizideki en küçük elamnın sırası {enküçükolanınsırası} ");
+    //  return "";
+
+    //}
+
+
+    //Bir dizinin ikinci büyük elemanını bulan program
     public string Result()
     {
-        string cümle = "Yeşil yapraklı ağaçların arasında güneşli bir günün tadını çıkardılar";
-        Console.WriteLine($"{cümle}");
-        char[] chars = cümle.ToCharArray();
-        int sayac = 0;
-        Console.WriteLine("Harf Girin:");
-        string k = Console.ReadLine();
-        for (int i = 0; i < chars.Length; i++)
+        int[] sayiDizisi = new int[] { 5, 12, 33, 19, 27, 8, 42, 56, 91, 10 };
+        List<int> list = new List<int>();
+        var çıakrılcaksayı = sayiDizisi.Max();
+        for (int i = 0; i < sayiDizisi.Length; i++)
         {
-            var aranankelime = chars[i];
-            if (k == aranankelime.ToString())
+            int sayi = sayiDizisi[i];
+            if (sayi != çıakrılcaksayı)
             {
-                sayac++;
+              list.Add(sayi);
             }
         }
-        Console.WriteLine($"Toplam Bu cümlede : {sayac} tane {k} harfi var");
+        
+        Console.WriteLine($"{list.Max()}");
         return "";
 
     }
