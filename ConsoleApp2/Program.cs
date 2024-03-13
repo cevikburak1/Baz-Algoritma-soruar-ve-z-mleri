@@ -985,7 +985,8 @@ internal class Program
     {
         Console.WriteLine("Kelime girin:");
         string k = Console.ReadLine();
-        char[] dizi = k.ToCharArray();
+        string trimmedInput = k.Replace(" ", "");
+        char[] dizi = trimmedInput.ToCharArray();
         int sesliharfsayisi = 0;
         if (dizi.Length > 20)
         {
