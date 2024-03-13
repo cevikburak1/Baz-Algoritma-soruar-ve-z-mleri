@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Numerics;
 using System.Reflection.Metadata;
 
@@ -728,6 +729,7 @@ internal class Program
     //}
 
     //BİLGİSAYAR  kelimesinin harflerini birer sola kaydırarak yeniden bilgisayar olunca bulan Program
+
     //public string Result()
     //{
     //    string kelime = "Bilgisayar";
@@ -892,7 +894,7 @@ internal class Program
     //{
     //    int[] sayiDizisi =new int[] { 1, 2, 3, 4, 5, 6, 7, 40, 20, 10, 100 };
     //    int sayac = 0;
-    //    Console.WriteLine("Harf Girin:");
+    //    Console.WriteLine("Sayı Girin:");
     //    int k = Convert.ToInt16(Console.ReadLine());
     //    for (int i = 0; i < sayiDizisi.Length; i++)
     //    {
@@ -922,21 +924,85 @@ internal class Program
 
 
     //Bir dizinin ikinci büyük elemanını bulan program
+    //public string Result()
+    //{
+    //    int[] sayiDizisi = new int[] { 5, 12, 33, 19, 27, 8, 42, 56, 91, 10 };
+    //    List<int> list = new List<int>();
+    //    var çıakrılcaksayı = sayiDizisi.Max();
+    //    for (int i = 0; i < sayiDizisi.Length; i++)
+    //    {
+    //        int sayi = sayiDizisi[i];
+    //        if (sayi != çıakrılcaksayı)
+    //        {
+    //          list.Add(sayi);
+    //        }
+    //    }
+
+    //    Console.WriteLine($"{list.Max()}");
+    //    return "";
+
+    //}
+
+
+    //Listede aynı elemandan varsa onu listeden çıkart 
+    //public string Result()
+    //{
+    //    int[] sayiDizisi = new int[] { 5, 12, 8, 5, 33, 19, 27, 8, 42, 56, 91, 10 };
+    //    List<int> list = new List<int>();
+    //    for (int i = 0; i < sayiDizisi.Length;i++)
+    //    {
+    //        int sayi = sayiDizisi[i];
+    //        //CONTAİNS Methodu içinde varmı diye kontrol eder
+    //        if (!list.Contains(sayi))
+    //        {
+    //            list.Add(sayi);
+    //        }
+    //    }
+    //    Console.WriteLine($"{list}");
+    //    return "";
+
+    //}
+
+
+    //dizinin sondan başa dogru gelmesi 
+
+    //public string Result()
+    //{
+    //    int[] sayiDizisi = new int[] { 5, 12, 33, 19, 27, 8, 42, 56, 91, 10 };
+    //    Array.Reverse(sayiDizisi);
+    //    var dizi = sayiDizisi;
+    //    Console.WriteLine($"{dizi}");
+    //    return "";
+
+    //}
+
+
+
+    //Klavyeden girilen maksimum 20 karakterli kelimedeki sesli
+    //harflerin kelimenin toplam karakter sayısına göre yüzde oranını
+    //hesaplayan program
     public string Result()
     {
-        int[] sayiDizisi = new int[] { 5, 12, 33, 19, 27, 8, 42, 56, 91, 10 };
-        List<int> list = new List<int>();
-        var çıakrılcaksayı = sayiDizisi.Max();
-        for (int i = 0; i < sayiDizisi.Length; i++)
+        Console.WriteLine("Kelime girin:");
+        string k = Console.ReadLine();
+        char[] dizi = k.ToCharArray();
+        int sesliharfsayisi = 0;
+        if (dizi.Length > 20)
         {
-            int sayi = sayiDizisi[i];
-            if (sayi != çıakrılcaksayı)
+            Console.WriteLine($"20 Karakterden büyük olamaz");
+            return "";
+        }
+        for (int i = 0; i < dizi.Length; i++)
+        {
+            string kelime = dizi[i].ToString();
+            if (kelime == "a"  || kelime == "e" || kelime == "ı" || kelime == "i" || kelime == "o" || kelime == "ö" || kelime == "u" || kelime == "ü")
             {
-              list.Add(sayi);
+                sesliharfsayisi++;
             }
         }
-        
-        Console.WriteLine($"{list.Max()}");
+        double oran = (sesliharfsayisi * 100.0) / dizi.Length;
+
+        Console.WriteLine($"{oran}");
         return "";
 
     }
